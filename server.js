@@ -13,6 +13,7 @@ var Review             =  require( './review' );
 var userController     =  require( './usercontroller' );
 var movieController    =  require( './moviecontroller' );
 var reviewController   =  require( './reviewController' );
+var cors                    = require('cors');
 require( './mydb.js' );
 
 
@@ -25,6 +26,7 @@ app.use( bodyParser.urlencoded( { extended : false } ) );
 
 // SET UP PASSPORT
 app.use( passport.initialize( ) );
+app.use( cors( ) );
 
 // CREATE ROUTER
 var router  =  express.Router( );
